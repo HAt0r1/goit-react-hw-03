@@ -6,12 +6,13 @@ import style from "./ContactForm.module.css";
 const validationForm = Yup.object().shape({
   name: Yup.string()
     .trim()
-    .min(2, "Too short name")
-    .max(8, "Max 8 symbols")
+    .min(3, "Too short name")
+    .max(50, "Max 8 symbols")
     .required("This field is required"),
   number: Yup.string()
-    .min(7, "Too short number")
-    .max(12, "Max 12 symbols")
+    .trim()
+    .min(3, "Too short number")
+    .max(50, "Max 12 symbols")
     .required("This field is required"),
 });
 
